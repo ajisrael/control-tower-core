@@ -8,7 +8,7 @@ import static control.tower.core.utils.Helper.isNullOrBlank;
 
 @Getter
 @Builder
-public class IncreaseProductStockWithNewInventoryCommand {
+public class IncreaseProductStockForNewInventoryCommand {
 
     @TargetAggregateIdentifier
     private String productId;
