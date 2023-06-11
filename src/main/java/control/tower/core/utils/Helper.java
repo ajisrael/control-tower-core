@@ -10,9 +10,27 @@ public class Helper {
         return string == null || string.isBlank();
     }
 
-    public static void throwErrorIfEntityDoesNotExist(Object entity, String message) {
+    public static void throwExceptionIfParameterIsEmpty(String string, String message) {
+        if (isNullOrBlank(string)) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void throwExceptionIfParameterIsNull(Object object, String message) {
+        if (object == null) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void throwExceptionIfEntityDoesNotExist(Object entity, String message) {
         if (entity == null) {
-            throw new IllegalStateException(message);
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void throwExceptionIfEntityDoesExist(Object entity, String message) {
+        if (entity != null) {
+            throw new IllegalArgumentException(message);
         }
     }
 
