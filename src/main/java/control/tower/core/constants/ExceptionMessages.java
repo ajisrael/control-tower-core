@@ -14,4 +14,6 @@ public class ExceptionMessages {
 
     public static final String PRODUCT_ID_CANNOT_BE_EMPTY = String.format(PARAMETER_CANNOT_BE_EMPTY, "productId");
     public static final String SKU_CANNOT_BE_EMPTY = String.format(PARAMETER_CANNOT_BE_EMPTY, "sku");
+    public static final String ADDRESS_ID_CANNOT_BE_EMPTY = String.format(PARAMETER_CANNOT_BE_EMPTY, "addressId");
+    public static final String PAYMENT_ID_CANNOT_BE_EMPTY = String.format(PARAMETER_CANNOT_BE_EMPTY, "paymentId");
 }
