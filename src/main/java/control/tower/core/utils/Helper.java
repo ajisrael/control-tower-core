@@ -23,6 +23,18 @@ public class Helper {
         }
     }
 
+    public static void throwExceptionIfParameterIsNegative(Integer integer, String message) {
+        if (integer < 0) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void throwExceptionIfParameterIsNegative(Double doubleValue, String message) {
+        if (doubleValue < 0.0) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
     public static void throwExceptionIfListParameterIsEmpty(List<?> objects, String message) {
         if (objects.isEmpty()) {
             throw new IllegalArgumentException(message);
