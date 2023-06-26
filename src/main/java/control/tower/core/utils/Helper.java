@@ -3,6 +3,7 @@ package control.tower.core.utils;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 public class Helper {
 
@@ -18,6 +19,12 @@ public class Helper {
 
     public static void throwExceptionIfParameterIsNull(Object object, String message) {
         if (object == null) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void throwExceptionIfListParameterIsEmpty(List<?> objects, String message) {
+        if (objects.isEmpty()) {
             throw new IllegalArgumentException(message);
         }
     }
