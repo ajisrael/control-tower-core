@@ -1,12 +1,12 @@
 package control.tower.core.query.queries;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
+import org.springframework.data.domain.Pageable;
 
 @Getter
 @SuperBuilder
-public class FindAllAddressesForUserQuery extends PageableQuery {
+public class PageableQuery {
 
-    private String userId;
+    private Pageable pageable;
 }

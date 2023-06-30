@@ -11,7 +11,7 @@ public class XStreamConfig {
     XStream xStream() {
         XStream xStream = new XStream();
 
-        xStream.allowTypesByWildcard(new String[] { "control.tower.**" });
+        xStream.allowTypesByWildcard(new String[] { "control.tower.**" , "org.springframework.**"});
         return xStream;
     }
 }
