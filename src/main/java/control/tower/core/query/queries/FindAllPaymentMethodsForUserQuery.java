@@ -1,11 +1,11 @@
 package control.tower.core.query.queries;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
-@AllArgsConstructor
-public class FindAllPaymentMethodsForUserQuery {
+@SuperBuilder
+public class FindAllPaymentMethodsForUserQuery extends PageableQuery{
 
     private String userId;
 }
